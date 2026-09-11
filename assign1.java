@@ -1,23 +1,24 @@
-import java.util.*;
+class SeatDuplicateChecker {
 
-class ReverseCustomerName {
+    static void checkDuplicateSeats(int[] seatNumbers) {
+        boolean found = false;
 
-    static String reverseCustomerName(String customerName) {
-        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < seatNumbers.length; i++) {
+            for (int j = i + 1; j < seatNumbers.length; j++) {
+                if (seatNumbers[i] == seatNumbers[j]) {
+                    System.out.println("Duplicate Seat Number Found: "
+                            + seatNumbers[i]);
+                    found = true;
+                }
+            }
+        }
 
-        for (int i = customerName.length() - 1; i >= 0; i--)
-            result.append(customerName.charAt(i));
-
-        return result.toString();
+        if (!found)
+            System.out.println("No Duplicate Seats Found");
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter name: ");
-        String name = sc.nextLine();
-
-        System.out.println("Original Name: " + name);
-        System.out.println("Reversed Name: " + reverseCustomerName(name));
+        int[] seats = {101, 102, 103, 102, 105};
+        checkDuplicateSeats(seats);
     }
 }
