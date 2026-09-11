@@ -10,9 +10,7 @@ class FileExtensionValidator {
 
         String extension = filename.substring(dot + 1);
 
-        if (extension.equalsIgnoreCase("pdf") ||
-            extension.equalsIgnoreCase("docx") ||
-            extension.equalsIgnoreCase("zip"))
+        if (extension.equalsIgnoreCase("pdf") ||extension.equalsIgnoreCase("docx") ||extension.equalsIgnoreCase("zip"))
             return "Accepted";
 
         return "Rejected — invalid file type";
