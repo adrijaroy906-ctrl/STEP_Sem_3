@@ -8,18 +8,18 @@ class IdCard {
     }
 
     public static void main(String[] args) {
-        IdCard ravi = new IdCard("Ravi", 0);
+        IdCard rohan = new IdCard("Rohan", 0);
 
         IdCard duplicate = ravi;
 
         duplicate.booksIssued = 3;
 
-        IdCard separate = new IdCard("Ravi", 3);
+        IdCard separate = new IdCard("Rohan", 3);
 
-        System.out.println("Ravi's booksIssued (via first variable): "
-                + ravi.booksIssued);
+        System.out.println("Rohan's booksIssued (via first variable): "
+                + rohan.booksIssued);
 
-        System.out.println("duplicate == ravi: " + (duplicate == ravi));
-        System.out.println("separate == ravi: " + (separate == ravi));
+        System.out.println("duplicate == rohan: " + (duplicate == rohan));
+        System.out.println("separate == rohan: " + (separate == rohan));
     }
 }
