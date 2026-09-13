@@ -28,8 +28,7 @@ class Player implements Comparable<Player> {
     }
 
     /*
-       Fantasy points used for ranking.
-       A simple composite score based on the information provided in the question.
+       Fantasy points used for ranking--- a simple composite score based on the information provided in the question.
     */
     double fantasyPoints() {
         return battingAverage + matchesPlayed;
