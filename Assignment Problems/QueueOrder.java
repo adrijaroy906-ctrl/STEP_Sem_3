@@ -1,3 +1,4 @@
+
 public class QueueOrder {
     static int firstBreak(int[] tokens) {
         for (int i = 1; i < tokens.length; i++) {
